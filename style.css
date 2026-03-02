@@ -1,165 +1,114 @@
-/* RESET */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
-
 body{
-  background:#f4f4f4;
-  padding:20px;
+font-family:'Poppins',sans-serif;
+margin:0;
+background:#f5f5f5;
 }
 
-/* CONTAINER PRINCIPAL */
-#app{
-  max-width:500px;
-  margin:0 auto;
+.topo{
+background:#ea1d2c;
+color:white;
+text-align:center;
+padding:18px;
+font-size:20px;
+font-weight:600;
+position:sticky;
+top:0;
 }
 
-/* CARD */
+.tela{
+display:none;
+padding:20px;
+max-width:520px;
+margin:auto;
+}
+
+.ativa{display:block;}
+
+.grid{
+display:grid;
+gap:14px;
+}
+
 .card{
-  background:white;
-  padding:20px;
-  border-radius:18px;
-  box-shadow:0 6px 18px rgba(0,0,0,0.06);
-  margin-bottom:20px;
+background:white;
+padding:18px;
+border-radius:14px;
+box-shadow:0 4px 14px rgba(0,0,0,.08);
+transition:.2s;
+text-align:center;
 }
 
-/* TÍTULOS */
-h2{
-  font-size:22px;
-  margin-bottom:10px;
+.card:hover{
+transform:scale(1.02);
 }
 
-h3{
-  font-size:16px;
-  margin-bottom:10px;
-  color:#444;
+.check{
+display:flex;
+align-items:center;
+gap:10px;
+background:white;
+padding:14px;
+margin:10px 0;
+border-radius:12px;
+box-shadow:0 2px 8px rgba(0,0,0,.05);
 }
 
-small{
-  color:#777;
-  font-size:13px;
+input{
+width:100%;
+padding:14px;
+margin:10px 0;
+border-radius:10px;
+border:1px solid #ddd;
+font-size:16px;
 }
 
-/* PREÇO */
-.price{
-  font-size:20px;
-  font-weight:bold;
-  margin-bottom:15px;
-  color:#27ae60;
+button{
+border:none;
+border-radius:12px;
+padding:15px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
 }
 
-/* BOTÃO PRINCIPAL */
-.btn{
-  width:100%;
-  padding:14px;
-  border:none;
-  border-radius:14px;
-  font-size:15px;
-  font-weight:bold;
-  cursor:pointer;
-  background:#27ae60;
-  color:white;
-  margin-top:10px;
-  transition:0.2s;
+.principal{
+width:100%;
+background:#ea1d2c;
+color:white;
+margin-top:15px;
 }
 
-.btn:hover{
-  background:#219150;
+.secundario{
+width:100%;
+background:#fff;
+border:2px solid #ea1d2c;
+color:#ea1d2c;
+margin-top:10px;
 }
 
-/* ITENS SELEÇÃO (CARNE / ACOMPANHAMENTO) */
-.option-item{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:14px;
-  border-radius:14px;
-  background:#f7f7f7;
-  margin-bottom:10px;
-  cursor:pointer;
-  transition:0.2s;
+.remover{
+background:#eee;
+padding:8px 14px;
 }
 
-.option-item:hover{
-  background:#ececec;
+.sacolaCard{
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-/* CHECKBOX ESTILO IFOOD */
-.check-box{
-  width:26px;
-  height:26px;
-  border-radius:6px;
-  border:2px solid #ccc;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:14px;
-  font-weight:bold;
-  transition:0.2s;
+#trocoArea{
+display:none;
 }
 
-.check-box.active{
-  background:#27ae60;
-  border-color:#27ae60;
-  color:white;
-}
-
-.check-box.active::after{
-  content:"✓";
-}
-
-/* TOTAL FIXO */
-.total-box{
-  position:sticky;
-  bottom:0;
-  background:white;
-  padding:15px;
-  border-radius:18px;
-  box-shadow:0 -4px 18px rgba(0,0,0,0.08);
-  margin-top:10px;
-}
-
-/* INPUTS */
-input, select, textarea{
-  width:100%;
-  padding:12px;
-  border-radius:12px;
-  border:1px solid #ddd;
-  margin-bottom:10px;
-  font-size:14px;
-  transition:0.2s;
-}
-
-input:focus, select:focus, textarea:focus{
-  outline:none;
-  border-color:#27ae60;
-  box-shadow:0 0 0 2px rgba(39,174,96,0.2);
-}
-
-/* SACOLA ITEM */
-.card p{
-  font-size:14px;
-  margin-bottom:5px;
-}
-
-.card strong{
-  font-size:15px;
-}
-
-/* RESPONSIVO */
+/* RESPONSIVO TOTAL */
 @media(max-width:480px){
-  body{
-    padding:10px;
-  }
 
-  .card{
-    padding:15px;
-  }
+.tela{
+padding:16px;
+}
 
-  .btn{
-    padding:12px;
-  }
+.card{
+padding:16px;
+}
 }
